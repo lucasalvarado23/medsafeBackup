@@ -1,180 +1,200 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Full Width Hero</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-    
-    #hero {
-      position: relative;
-      height: 85vh;
-      width: 100vw;
-      overflow: hidden;
-      margin-left: calc(-50vw + 50%);
-    }
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  #hero {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin-left: calc(-50vw + 50%);
+  }
 
-    #hero br{
-        display: none;
-    }
-    
-    #hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .left-section,
-    .right-section {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 50%;
-    }
-    
-    .left-section {
-      left: 0;
-      color: #fff;
-      padding: 5% 10%;
-    }
-    
-    .right-section {
-      right: 0;
-      padding: 5% 10%;
-      margin-top: 90px;
-    }
-    
-    .left-section h1,
-    .left-section p {
-      font-weight: bold;
-      text-align: left;
-    }
-
-    .right-section h1 {
-      font-weight: bold;
-      text-align: left;
-      font-size: 38px;
-      margin-top: -14px;
-    }
-
-    .right-section p {
-      font-weight: bold;
-      text-align: left;
-      font-size: 22px;
-    }
-    
-    .button-section {
-      margin-top: 20px;
-    }
-    
-    .btn-primary,
-    #view-industries-button {
-      background-color: #0056a7;
-      color: #fff;
-      padding: 5px 20px;
-      border: none;
-      border-radius: 15px;
-      cursor: pointer;
-      font-size: 18px;
-      height: 50px;
-      text-align: center;
-    }
-    
-    .btn-primary:hover,
-    #view-industries-button:hover {
-      background-color: #0062cc;
-    }
-    
-    .btn-primary:focus,
-    #view-industries-button:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-    }
-    
-    .dropdown {
-      position: relative;
-      display: inline-block;
-      z-index: 2;
-    }
-
-    .dropdown button {
-      margin: 0px;
-    }
-    
-    .dropdown-content {
+  #hero br{
       display: none;
-      position: absolute;
-      width: 75%;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 3;
-      color: black;
-      background-color: white;
-      border-radius: 5px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-    }
-    
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    
-    .dropdown-content a {
-      color: black;
-      display: block;
-      margin-bottom: 10px;
-      padding: 4px;
-    }
-    
-    .dropdown-content a:hover {
-      color: #428bca;
-      font-size: 16px;
-    }
-    
-    .dropdown button i {
-      margin-left: 5px;
-      color: white;
-      position: absolute;
-      top: 20px;
-    }
-    
-    .dropdown button::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 8px;
-      transform: translateY(-50%);
-      border: solid white;
-      border-width: 0 1px 1px 0;
-      display: inline-block;
-      padding: 3px;
-      transition: transform 0.3s ease;
-    }
-    
-    .dropdown:hover button::after {
-      transform: translateY(-50%) rotate(45deg);
-    }
+  }
+  
+  #hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .left-section,
+  .right-section {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+  }
+  
+  .left-section {
+    left: 0;
+    color: #fff;
+    padding: 5% 10%;
+  }
+  
+  .right-section {
+    right: 0;
+    padding: 5% 10%;
+    margin-top: 155px;
+  }
+  
+  .left-section h1,
+  .left-section p {
+    font-weight: bold;
+    text-align: left;
+  }
 
-    @media (max-width: 750px) {
-      #hero {
-        display: none;
-      }
-    }
+  .right-section h1 {
+    font-weight: bold;
+    text-align: left;
+    font-size: 38px;
+    margin-top: -14px;
+  }
 
-    @media (min-width: 1450px) {
-      #hero {
-        height: 650px;
-      }
+  .right-section p {
+    font-weight: bold;
+    text-align: left;
+    font-size: 22px;
+  }
+  
+  .button-section {
+    margin-top: 20px;
+  }
+  
+  .btn-primary,
+  #view-industries-button {
+    background-color: #0056a7;
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    text-align: center;
+  }
+  
+  .btn-primary:hover,
+  #view-industries-button:hover {
+    background-color: #0062cc;
+  }
+  
+  .btn-primary:focus,
+  #view-industries-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+  }
+
+  .dropdown button {
+    margin: 0px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 75%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    padding: 4px;
+  }
+  
+  .dropdown-content a:hover {
+    color: #428bca;
+    font-size: 16px;
+  }
+  
+  .dropdown button i {
+    margin-left: 5px;
+    color: white;
+    position: absolute;
+    top: 20px;
+  }
+  
+  .dropdown button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown:hover button::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  @media (max-width: 750px) {
+    #hero {
+      display: none;
     }
+  }
+
+  @media (min-width: 1450px) {
+    #hero {
+      height: 90vh;
+    }
+      
+  .right-section {
+    right: 0;
+    padding: 5% 10%;
+    margin-top: 200px;
+  }
+  
+  .left-section h1,
+  .left-section p {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .right-section h1 {
+    font-weight: bold;
+    text-align: left;
+    font-size: 50px;
+    margin-top: -14px;
+  }
+
+  .right-section p {
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+  }
+}
   </style>
-</head>
-<body>
+
   <div id="hero">
     <video src="https://medsafedev.wpengine.com/wp-content/uploads/2023/06/computerDesign.mp4" autoplay muted loop></video>
     <div class="left-section">
@@ -200,5 +220,3 @@
         </div>
     </div>
   </div>
-</body>
-</html>
